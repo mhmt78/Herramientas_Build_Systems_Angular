@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "haber"
+    }
+  },
+  "defaultProject": "haber",
+  "cli": {
+    "analytics": "a5dd372a-97b8-45f8-8546-a188f261308e"
+  }
 }
