@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
-import { Angular2RoutingModule } from './app.routing.module';
+import { RoutingModule } from './app.routing.module';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Components/login/login.component';
@@ -34,7 +34,7 @@ import { DetalleCarritoComponent } from './Components/detalle-carrito/detalle-ca
     BrowserModule,
     FormsModule,
     HttpModule,
-    Angular2RoutingModule,
+    RoutingModule,
     ReactiveFormsModule,
     HttpClientModule
   ],

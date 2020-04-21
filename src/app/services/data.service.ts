@@ -44,8 +44,9 @@ export class DataService {
     }
     this.productosSeleccionados = [];
     let newData = JSON.stringify(this.productos);
-    return this.http.put('https://back-end-tienda.firebaseio.com/productos/.json', newData)
+    return this.http.put('https://tiendaangular-eb1d9.firebaseio.com/productos/.json', newData)
     
   }
 
+  
 }

@@ -18,4 +18,4 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-export class Angular2RoutingModule { }
+export class RoutingModule { }

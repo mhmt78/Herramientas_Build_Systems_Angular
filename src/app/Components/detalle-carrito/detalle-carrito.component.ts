@@ -25,6 +25,12 @@ export class DetalleCarritoComponent implements OnInit {
     return total;
   }
 
+  onCancelar(){
+    this.data.submitPedido()
+      .subscribe((data)=>this.router.navigate(['/inicio']))
+    
+  }
+
   onPagar(){
     this.data.submitPedido()
       .subscribe((data)=>this.router.navigate(['/inicio']))
