@@ -7,12 +7,13 @@
     </div>
     <div class="row">
       <div class="col-sm-5">
-        <img [src]="'assets/'+productoSeleccionado.imagen" alt="..." class="img-thumbnail">
+        <img [src]="productoSeleccionado.imagen" alt="{{productoSeleccionado.nombre}}" class="img-thumbnail">
         <a name="" id="" class="btn btn-default" [routerLink]="['/inicio']" role="button">Atrás</a>
       </div>
       <div class="col-sm-6">
-        <h2>Precio: ${{productoSeleccionado.precio}}</h2>
-        <h3>Unidades disponibles: {{productoSeleccionado.disponibilidad}}</h3>
+        <p><b>Descripción:</b> {{productoSeleccionado.descripcion}}</p>
+        <p><b>Precio: S/ </b>{{productoSeleccionado.precio}}</p>
+        <p><b>Unidades disponibles: </b>{{productoSeleccionado.disponibilidad}}</p>
       </div>
     </div>
 
