@@ -1,0 +1,62 @@
+<div class="main">
+  <div class="container">
+    <div class="row login-form">
+      <div class="col-sm-12">
+        <h3 class="text-center">Inicia Sesión</h3>
+        <p class="text-danger text-center" *ngIf="f.submitted && f.controls['email'].errors">El usuario o la contraseña son incorrectos</p>
+      </div>
+      <form (ngSubmit)="login( f )"
+            #f="ngForm">
+            <!-- <span class="text-danger text-center" *ngIf="f.submitted && f.controls['email'].errors">Ingrese su email</span> -->
+            <span class="text-danger text-center" *ngIf="f.submitted && f.controls['email'].errors">Ingrese su email</span>
+        <div class="primero form-group col-sm-12">
+          <label for="">Correo electrónico</label>
+          <input class="form-control" 
+                type="text"
+                name="email"
+                required
+                email 
+                [(ngModel)]="usuario.email"
+                placeholder="Email">
+        </div>
+        
+        <span class="text-danger text-center" *ngIf="f.submitted && f.controls['password'].errors">Ingrese Contraseña (minimo 6 caracteres)</span>
+        <div class="form-group col-sm-12">
+         
+          <label for="">Contraseña</label>
+          <input  class="form-control" 
+                  type="password" 
+                  name="password" 
+                  [(ngModel)]="usuario.password"
+                  minlength="6"
+                  requerid
+                  password
+                  placeholder="Password">
+        </div>
+        <button type="submit" class="btn btn-success center-block">Ingresar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="main"> 
+  <div class="container">
+    <div class="row login-form">
+      <div class="col-sm-12">
+        <h3 class="text-center">Inicia Sesión</h3>
+        <p class="text-danger text-center" *ngIf="!match">El usuario o la contraseña son incorrectos</p>
+      </div>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="primero form-group col-sm-12">
+          <label for="">Correo electrónico</label>
+          <input type="email" class="form-control" formControlName="email" id="email" required>
+        </div>
+        <div class="form-group col-sm-12">
+          <label for="">Contraseña</label>
+          <input type="password" class="form-control" formControlName="password" id="password" required>
+        </div>
+        <button type="submit" class="btn btn-success center-block">Ingresar</button>
+      </form>
+    </div>
+  </div>
+</div>-->
